@@ -4,7 +4,7 @@ const clearbutton = document.querySelector('#butt1');
 const newbutton = document.getElementById('butt2');
 const linecontainer = document.querySelector(".dimension-size");
 const line = document.createElement("p");
-line.textContent = `Current Number of Boxes per Dimension: ${dimension}`;
+line.textContent = `Grid Size: ${dimension}x${dimension}`;
 linecontainer.append(line);
 function newGrid(){
     dabba.textContent = "";
@@ -20,11 +20,12 @@ function newGrid(){
 }
 
 function createGrid(dimension){
-    line.textContent = `Current Number of Boxes per Dimension: ${dimension}`;
+    line.textContent = `Grid Size: ${dimension}x${dimension}`;
     for (let i=0;i<dimension*dimension;i++) {
         const drawingBox = document.createElement("div");
         drawingBox.style.width = `${100/dimension}%`;
         drawingBox.style.border = "0.1px solid black";
+        drawingBox.style.backgroundColor = "white";
         drawingBox.classList.add("drawing-box");
         drawingBox.style.boxSizing = "border-box";
         dabba.append(drawingBox);

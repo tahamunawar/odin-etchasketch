@@ -1,6 +1,18 @@
+@font-face {
+    font-family: "Cooper Black";
+    src: url("fonts/CooperBlack.woff2") format("woff2"),
+         url("fonts/CooperBlack.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: #232425;
 }
 
 .title, .button-container, .dimension-size, .grid-box-box {
@@ -8,11 +20,49 @@
     justify-content: center;
 }
 
+.clear-button, .new-button {
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+.clear-button {
+    color: #e8cc9a;
+    background-color: #232425;
+    border: 2px solid #d6561a;
+}
+
+.new-button {
+    color: #e8cc9a;
+    background-color: #d6561a;
+    border: 2px solid #d6561a;
+}
+
+.title {
+    color: #e8cc9a;
+    padding: 10px;
+    font-size: 50px;
+    font-family: "Cooper Black", serif;
+}
+
+.dimension-size {
+    color: #d6561a;
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+}
+
 #grid-box {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid red;
-    width: 600px;
-    height: 600px;
+    border: 2px solid #d6561a;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 50px;
+}
+
+.button-container {
+    gap: 10px;
+    padding: 10px;
 }
 
